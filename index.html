@@ -9,6 +9,7 @@
   </title>
   <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -38,8 +39,8 @@
             </a>
           </li>
           <li>
-            <a href="#testiomnial">
-              Gallery
+            <a href="#testimoni">
+              Testimoni
             </a>
           </li>
           <li>
@@ -71,11 +72,11 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium reprehenderit, officia at dolores dolorem totam. Ab ipsam deleniti quaerat soluta. iaja ia
           </p>
           <a href="#jn" class="btn-home rounded-pill">
-            <i class="fas fa-phone-alt"></i> Pesan Sekarang
+            Produk Kami
           </a>
         </div>
-        <div class="col-md-6 col-sm-12 home-img ">
-          <img src="assets/img/bg5.png" alt="background-image" id="img-home">
+        <div class="col-md-6 col-sm-12 home-img">
+          <img src="assets/img/bg7.jpg" alt="background-image" id="img-home">
         </div>
       </div>
     </div>
@@ -84,7 +85,7 @@
 
   <!-- produk section -->
   <section id="produk" class="pt-5 pb-5">
-    <div class="container pt-3">
+    <div class="container pt-4">
       <div id="produk-title" class="d-flex justify-content-between align-items-center mb-4">
         <h2>
           Produk Kami
@@ -255,11 +256,125 @@
     </div>
   </section>
   <!-- end produk section -->
+  
+  <!-- about section -->
+  <section id="about" class="pt-5">
+    <div class="container pt-4">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 " id="about-img">
+          <img src="assets/img/about.jpg" alt="img-about">
+        </div>
+        <div class="col-md-6 col-sm-12 " id="about-info">
+          <h2>
+            Tentang Kami
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum cum eveniet ipsam eius distinctio recusandae nostrum, eos, ullam, delectus modi, commodi molestias sunt ipsum! Est.
+          </p>
+          <a href="" class="btn-about">
+            Belanja Sekarang 
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end about section -->
+  
+  
+  <!-- testimoni section -->
+  <section id="testimoni" class="pt-5">
+    <div class="container pt-4 pb-3 swiper" id="testimoni-swiper">
+        <div id="testimoni-title">
+          <h2 class="text-center">
+            Testimoni
+          </h2>
+        </div>
+        <div class="row swiper-wrapper">
+          <div class="col-md-6 col-sm-12 swiper-slide">
+            <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+          </div>
+          <div class="col-md-6 col-sm-12 swiper-slide">
+            <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+          </div>
+          <div class="col-md-6 col-sm-12 swiper-slide">
+            <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+          </div>
+          <div class="col-md-6 col-sm-12 swiper-slide">
+            <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+          </div>
+          
+<div class="swiper-pagination"></div>
 
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+  </section>
+  <!-- end testimoni section -->
 
 
   <script src="assets/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="assets/js/bootstrap.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="assets/swiper/swiper-bundle.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="assets/js/script.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    const swiper = new Swiper('#testimoni-swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+  </script>
 </body>
 </html>

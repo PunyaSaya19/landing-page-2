@@ -38,7 +38,7 @@ body {
   min-height: 5000px;
 }
 section {
-  min-height: 500px;
+  min-height: 600px;
 }
 
 /* header */
@@ -148,6 +148,12 @@ section#produk {
 #produk #produk-title a:hover {
   color: var(--blue1);
 }
+#produk .card {
+  transition: .3s;
+}
+#produk .card:hover {
+  transform: scale(1.02);
+}
 #produk .card small {
   font-size: var(--smaller-font-size);
   color: var(--blue1);
@@ -179,8 +185,60 @@ section#produk {
   text-decoration: none;
 }
 
+/* about section */
+#about {
+  
+}
+#about #about-img img {
+  width : 100%;
+  max-height: 600px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+}
+#about-info h2 {
+  font-size: var(--h2-font-size);
+  font-weight: 800;
+  color: var(--black1);
+  margin-bottom: .5rem;
+}
+#about-info p {
+  font-family: "Poppins";
+  color: var(--black2);
+  font-size: var(--small-font-size);
+}
+#about-info a.btn-about:hover {
+  background: var(--blue1);
+  color: var(--white);
+}
+#about-info a.btn-about {
+  background: var(--white2);
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--blue1);
+  font-size: var(--small-font-size);
+  font-family: "Poppins";
+}
 
-
+/* testimoni section */
+#testimoni .container {
+  background: var(--blue1);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+#testimoni .swiper-wrapper {
+  width: 100%;
+  position: relative;
+}
+#testimoni .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+#testimoni #testimoni-title h2 {
+  font-size: var(--h2-font-size);
+  color: var(--white);
+  font-weight: 700;
+}
 /* mobile version */
 @media (max-width: 768px) {
   :root {
@@ -193,6 +251,9 @@ section#produk {
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
     --smaller-font-size: .7rem;
+  }
+  section {
+    min-height: 100vh;
   }
   /* header */
   #header {
@@ -249,8 +310,8 @@ section#produk {
   #home {
     min-height: 100vh;
   }
-  #home .home-img {
-    margin-top: px;
+  #home .home-img img {
+    margin-top: 2rem;
   }
   .home-info h5 {
     margin-top: 1.5rem;
@@ -262,4 +323,29 @@ section#produk {
   .home-info p {
     padding-right: 3rem;
   }
+  
+  /* produk section */
+  #produk .card {
+    margin: .89rem 1.5rem;
+  }
+  
+  /* about section */
+  #about {
+    padding: 0 1.8rem;
+  }
+  #about #about-img {
+    margin-bottom: 1.3rem;
+  }
+  #about-info p {
+    margin-bottom: 2rem;
+  }
+  #about-info a.btn-about {
+    padding: 1rem 2rem;
+  }
+  
+  /* testimoni section*/
+  #testimoni .container {
+    border-radius: 0;
+  }
+  
 }
