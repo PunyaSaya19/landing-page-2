@@ -27,6 +27,7 @@
   font-weight: 500;
   text-decoration: none;
   list-style: none;
+  color: var(--black1);
 }
 
 html {
@@ -35,7 +36,6 @@ html {
 
 body {
   overflow-x: hidden;
-  min-height: 5000px;
 }
 section {
   min-height: 600px;
@@ -157,7 +157,6 @@ section#produk {
 #produk .card small {
   font-size: var(--smaller-font-size);
   color: var(--blue1);
-  
   font-weight: 600;
 }
 #produk .card h5 {
@@ -169,6 +168,7 @@ section#produk {
   font-size: var(--h4-font-size);
   font-family: "Poppins";
   font-weight: 500;
+  color: var(--black2);
 }
 #produk .card .alert b.alert-heading {
   font-size: var(--small-font-size);
@@ -187,7 +187,8 @@ section#produk {
 
 /* about section */
 #about {
-  
+  min-height: 300px;
+  margin-bottom: 1rem;
 }
 #about #about-img img {
   width : 100%;
@@ -219,26 +220,125 @@ section#produk {
   font-family: "Poppins";
 }
 
-/* testimoni section */
-#testimoni .container {
+/* pembelian section */
+#pembelian {
+  min-height: 300px;
   background: var(--blue1);
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
 }
-#testimoni .swiper-wrapper {
-  width: 100%;
-  position: relative;
-}
-#testimoni .swiper-wrapper .swiper-slide {
-  width: 100%;
-  height: 100%;
-}
-#testimoni #testimoni-title h2 {
+#pembelian .pembelian-title {
   font-size: var(--h2-font-size);
   color: var(--white);
-  font-weight: 700;
+  font-weight: 800;
+  margin-bottom: 1rem;
 }
+
+#pembelian .pembelian-box {
+  background: var(--white2);
+  padding: 1rem 1.3rem;
+  height: 100%;
+  border-radius: 5px;
+}
+.pembelian-box .pembelian-bx-img img {
+  width: 90px;
+  height: 90px;
+  margin-right: .9rem;
+  border-radius: 3px;
+}
+.pembelian-box .pembelian-bx-info h4 {
+  font-size: var(--h4-font-size);
+  font-weight: 500;
+  margin-bottom: .6rem;
+  font-family: "Poppins";
+  color: var(--black1);
+  text-transform: uppercase;
+}
+.pembelian-box .pembelian-bx-info p {
+  font-size: var(--smaller-font-size);
+  color: var(--black2);
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+/* location section */
+#location .location-title h2{
+  font-size: var(--h2-font-size);
+  color: var(--black1);
+  font-family: "Poppins";
+  font-weight: 600;
+  position: relative;
+  padding-left: .8rem;
+}
+#location .location-title h2::before {
+  content: "";
+  position: absolute;
+  background: var(--blue1);
+  width: 5px;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+}
+#location .location-map {
+  width: 100%;
+  min-height: 450px;
+}
+
+/* footer */
+#footer {
+  background: #24262b;
+  padding: 1.5rem 0 1rem 0;
+}
+#footer .footer-title h6 {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: var(--small-font-size);
+}
+.foot-sosmed a.foot-icon{
+  padding: .1rem .4rem;
+  background: #44464b;
+  margin: 0 .25rem;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.foot-sosmed a.foot-icon:hover {
+  background: var(--blue1);
+}
+.foot-sosmed .foot-icon i {
+  margin: 0!important;
+  color: #bbb;
+}
+.foot-sosmed .foot-icon i:hover {
+  color: #fff;
+}
+
+.foot-link ul {
+  list-style: none;
+  padding: 0;
+  padding-left: 3px;
+}
+.foot-link ul li a {
+  text-decoration: none;
+  color: #bbb;
+  font-size: var(--smaller-font-size);
+}
+.foot-link ul li a:hover {
+  color: #fff;
+  margin-left: 4px;
+}
+.foot-box-info {
+  padding-left: 4px;
+}
+.foot-box-info i {
+  margin-right: .4rem;
+}
+.foot-box-info i, .foot-box-info p {
+  color: #bbb;
+  font-size: var(--smaller-font-size);
+}
+#footer .copyright {
+  font-size: var(--small-font-size) !important;
+}
+
+
 /* mobile version */
 @media (max-width: 768px) {
   :root {
@@ -247,7 +347,7 @@ section#produk {
     --h1-font-size: 2.1rem;
     --h2-font-size: 1.75rem;
     --h3-font-size: 1.5rem;
-    --h4-font-size: 1.25rem;
+    --h4-font-size: 1.2rem;
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
     --smaller-font-size: .7rem;
@@ -332,6 +432,7 @@ section#produk {
   /* about section */
   #about {
     padding: 0 1.8rem;
+    margin-bottom: 3rem;
   }
   #about #about-img {
     margin-bottom: 1.3rem;
@@ -341,11 +442,19 @@ section#produk {
   }
   #about-info a.btn-about {
     padding: 1rem 2rem;
+    margin-bottom: 3rem;
   }
   
-  /* testimoni section*/
-  #testimoni .container {
-    border-radius: 0;
+  /* pembelian section */
+  #pembelian {
+    padding-bottom: 1rem;
+  }
+  #pembelian .row .col-md-6:nth-child(1) {
+    margin-bottom: 1.5rem;
   }
   
+  /* footer */
+  .foot-sosmed {
+    margin-bottom: 1rem;
+  }
 }
