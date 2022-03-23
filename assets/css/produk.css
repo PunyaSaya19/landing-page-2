@@ -77,23 +77,42 @@ body {
   margin-top: 5rem;
   margin-bottom: 2rem;
 }
-
+#kategori ul li a {
+  text-decoration: none;
+  color: var(--black1);
+  font-weight: 400;
+  font-family: "poppins";
+  text-transform: capitalize;
+}
 .crd-produk {
   padding: .8rem .9rem;
 }
 .crd-produk img.crd-img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
 }
 .crd-produk .alert {
-  padding: .2rem .3rem;
+  padding: .1rem .2rem;
 }
 .crd-produk .alert b {
+  font-size: var(--smaller-font-size);
+}
+.crd-produk p.stok-habis {
   font-size: var(--small-font-size);
 }
-
-
-
+.crd-produk .crd-kategori {
+  font-size: var(--small-font-size);
+  color: var(--blue1);
+  font-weight: 700;
+}
+.crd-produk .crd-title {
+  font-size: var(--h3-font-size);
+  color: var(--black1);
+  font-weight: 800;
+}
+.crd-produk .crd-harga {
+  font-size: var(--h4-font-size);
+}
 
 /* footer */
 #footer {
@@ -173,42 +192,7 @@ body {
   #header {
     padding: 0 .75rem;
   }
-  #header navbar.my-nav.active {
-    transform: translate(0, 0);
-  }
-  #header navbar.my-nav {
-    display: block;
-    position: fixed;
-    z-index: 9999;
-    background: var(--black1);
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    width: 70%;
-    transition: .75s;
-    transform: translate(-100%, 0);
-  }
-  .my-nav ul {
-    flex-direction: column;
-    width: 100%;
-  }
-  .my-nav ul li:nth-child(1) {
-    margin-top: 3rem;
-  }
-  .my-nav ul li {
-    display: block;
-  }
-  .my-nav ul li a {
-    color: #fff;
-    margin: .7rem 0;
-    padding: .85rem 2rem;
-    display: block;
-    width: 100%;
-  }
-  .my-nav ul li a:hover {
-    margin-left: .65rem;
-  }
+  
   #header .menu-toggle {
     display: block;
     background: #ddd;
@@ -220,53 +204,60 @@ body {
     transition: .5s;
   }
   
-  /* home section */
-  #home {
+  /* kategori section */
+  #kategori {
+    position: fixed;
+    z-index: 999999;
+    background: rgba(0,0,0,1);
+    top: 0;
+    left: 0;
     min-height: 100vh;
+    width: 80%;
+    padding: 1.5rem .2rem 1rem 1.5rem;
+    transform: translate(-100%, 0);
+    transition: .75s;
   }
-  #home .home-img img {
-    margin-top: 2rem;
+  #kategori.active {
+    transform: translate(0, 0);
   }
-  .home-info h5 {
-    margin-top: 1.5rem;
+  #kategori h4 {
+    color: #fff;
+    position: relative;
+    padding-bottom: 5px;
+    display: inline;
+    
   }
-  .home-info a.btn-home {
-    width: 45%;
-    padding: .4rem 0;
+  #kategori h4::before {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--blue2);
+    left: 0;
+    bottom: 0;
   }
-  .home-info p {
-    padding-right: 3rem;
+  #kategori ul {
+    border: none;
+    background: transparent;
   }
-  
-  /* produk section */
-  #produk .card {
-    margin: .89rem 1.5rem;
+  #kategori ul li:nth-child(1) {
+    padding-top: 1rem;
   }
-  
-  /* about section */
-  #about {
-    padding: 0 1.8rem;
-    margin-bottom: 3rem;
+  #kategori ul li {
+    border: none;
+    background: transparent;
+    padding: .5rem;
   }
-  #about #about-img {
-    margin-bottom: 1.3rem;
+  #kategori ul li.active a {
+    color: var(--blue2);
+    font-weight: 600;
   }
-  #about-info p {
-    margin-bottom: 2rem;
+  #kategori ul li a {
+    color: #fff;
+    transition: .75s;
   }
-  #about-info a.btn-about {
-    padding: 1rem 2rem;
-    margin-bottom: 3rem;
-  }
-  
-  /* pembelian section */
-  #pembelian {
-    padding-bottom: 1rem;
-  }
-  #pembelian .row .col-md-6:nth-child(1) {
-    margin-bottom: 1.5rem;
-  }
-  
+ 
   /* footer */
   .foot-sosmed {
     margin-bottom: 1rem;
